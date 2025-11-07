@@ -47,3 +47,67 @@ cd LR6
 ```bash
 git pull
 ```
+
+---
+
+
+## 5. Работа с ветками и история коммитов
+- Просмотр локальных и удалённых веток
+- Получение истории коммитов
+- Скриншот:
+![5.1](screenshots/Screenshot_4.png)
+![5.2](screenshots/Screenshot_5.png)
+![5.3](screenshots/Screenshot_6.png)
+![5.4](screenshots/Screenshot_12.png)
+- Команды:
+```bash
+git branch -a
+(master) git log --oneline --graph --decorate
+(branch1) git log --oneline --graph --decorate
+```
+
+
+---
+
+
+## 6. Просмотр последних изменений
+- Проверка состояния репозитория
+- Сравнение веток
+- Скриншот:
+![6](screenshots/Screenshot_7.png)
+- Команды:
+```bash
+git status
+git diff master branch1
+```
+
+
+---
+
+
+## 7. Слияние веток и разрешение конфликта
+- Переключение на ветку `master` и слияние с `branch1`
+- Разрешение конфликта в `mergefile.txt`
+- Скриншот:
+![7.1](screenshots/Screenshot_8.png)
+![7.2](screenshots/Screenshot_13.png)
+- Команды:
+```bash
+git checkout master
+git merge branch1
+git add mergefile.txt
+git commit -m "Разрешён конфликт при слиянии branch1 и master"
+```
+
+
+---
+
+
+## 8. Удаление побочной ветки
+- Удаление локальной ветки после успешного слияния
+- Скриншот:
+![8](screenshots/Screenshot_9.png)
+- Команды:
+```bash
+git branch -d branch1
+```
